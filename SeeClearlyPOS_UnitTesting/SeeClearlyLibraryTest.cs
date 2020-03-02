@@ -9,45 +9,34 @@ namespace SeeClearlyPOS_UnitTesting
     [TestClass]
     public class SeeClearlyLibraryTest
     {
+        Terminal.Cart shoppingCart = new Terminal.Cart();
+        Terminal.Catalog priceCatalog = new Terminal.Catalog();
+        double billRunningTotal = 0;
 
+        public void UnitTestHelper(string[] testCase, double expectedResult)
+        {
+            shoppingCart.CurrentCart.InsertRange(0, testCase);
+            double results = shoppingCart.CalculateCartTotal(shoppingCart.CurrentCart, priceCatalog.ProductCatalog, billRunningTotal);
+            Console.WriteLine("Unit Test Expected for {0} ", results);
+            Assert.AreEqual(results, expectedResult);
+        }
         [TestMethod]
         public void TestCart1()
         {
-            Terminal newTerminalSession = new Terminal();
-            Terminal.Cart shoppingCart = new Terminal.Cart();
-            Terminal.Catalog priceCatalog = new Terminal.Catalog();
-            double billRunningTotal = 0;
             string[] testCase1 = { "A", "B", "C", "D", "A", "B", "A" };
-            shoppingCart.CurrentCart.InsertRange(0, testCase1);
-            double results = newTerminalSession.Calculatetotal(shoppingCart.CurrentCart, priceCatalog.newProductCatalog, billRunningTotal);
-            Console.WriteLine("Unit Test Expected for {0} ", results);
-            Assert.AreEqual(results, 13.25);
+            UnitTestHelper(testCase1, 13.25);
         }
         [TestMethod]
         public void TestCart2()
         {
-            Terminal newTerminalSession = new Terminal();
-            Terminal.Cart shoppingCart = new Terminal.Cart();
-            Terminal.Catalog priceCatalog = new Terminal.Catalog();
-            double billRunningTotal = 0;
             string[] testCase2 = { "C", "C", "C", "C", "C", "C", "C" };
-            shoppingCart.CurrentCart.InsertRange(0, testCase2);
-            double results = newTerminalSession.Calculatetotal(shoppingCart.CurrentCart, priceCatalog.newProductCatalog, billRunningTotal);
-            Console.WriteLine("Unit Test Expected for {0} ", results);
-            Assert.AreEqual(results, 6.00);
+            UnitTestHelper(testCase2, 6.00);
         }
         [TestMethod]
         public void TestCart3()
         {
-            Terminal newTerminalSession = new Terminal();
-            Terminal.Cart shoppingCart = new Terminal.Cart();
-            Terminal.Catalog priceCatalog = new Terminal.Catalog();
-            double billRunningTotal = 0;
             string[] testCase3 = { "A", "B", "C", "D" };
-            shoppingCart.CurrentCart.InsertRange(0, testCase3);
-            double results = newTerminalSession.Calculatetotal(shoppingCart.CurrentCart, priceCatalog.newProductCatalog, billRunningTotal);
-            Console.WriteLine("Unit Test Expected for {0} ", results);
-            Assert.AreEqual(results, 7.25);
+            UnitTestHelper(testCase3, 7.25);
         }
     }
 }
