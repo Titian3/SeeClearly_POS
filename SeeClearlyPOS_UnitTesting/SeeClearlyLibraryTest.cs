@@ -17,7 +17,6 @@ namespace SeeClearlyPOS_UnitTesting
             Terminal.Cart shoppingCart = new Terminal.Cart();
             Terminal.Catalog priceCatalog = new Terminal.Catalog();
             double billRunningTotal = 0;
-            priceCatalog.AddDefaultProducts(priceCatalog.newProductCatalog);
             string[] testCase1 = { "A", "B", "C", "D", "A", "B", "A" };
             shoppingCart.CurrentCart.InsertRange(0, testCase1);
             double results = newTerminalSession.Calculatetotal(shoppingCart.CurrentCart, priceCatalog.newProductCatalog, billRunningTotal);
@@ -31,7 +30,6 @@ namespace SeeClearlyPOS_UnitTesting
             Terminal.Cart shoppingCart = new Terminal.Cart();
             Terminal.Catalog priceCatalog = new Terminal.Catalog();
             double billRunningTotal = 0;
-            priceCatalog.AddDefaultProducts(priceCatalog.newProductCatalog);
             string[] testCase2 = { "C", "C", "C", "C", "C", "C", "C" };
             shoppingCart.CurrentCart.InsertRange(0, testCase2);
             double results = newTerminalSession.Calculatetotal(shoppingCart.CurrentCart, priceCatalog.newProductCatalog, billRunningTotal);
@@ -45,7 +43,6 @@ namespace SeeClearlyPOS_UnitTesting
             Terminal.Cart shoppingCart = new Terminal.Cart();
             Terminal.Catalog priceCatalog = new Terminal.Catalog();
             double billRunningTotal = 0;
-            priceCatalog.AddDefaultProducts(priceCatalog.newProductCatalog);
             string[] testCase3 = { "A", "B", "C", "D" };
             shoppingCart.CurrentCart.InsertRange(0, testCase3);
             double results = newTerminalSession.Calculatetotal(shoppingCart.CurrentCart, priceCatalog.newProductCatalog, billRunningTotal);

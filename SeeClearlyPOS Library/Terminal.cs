@@ -6,6 +6,7 @@ namespace SeeClearlyPOS_Library
 {
     public class Terminal
     {
+        //Pricing Data Model - Uses 2 addition properties to identify when bulk should be applied and how much of a discount should be applied to the cart.
         public class ProductList
         {
             public string ProductCode { get; set; }
@@ -14,23 +15,30 @@ namespace SeeClearlyPOS_Library
             public int BulkTrigger { get; set; }
             public double BulkDiscount { get; set; }
 
+            //Used in Console Display
             public override string ToString()
             {
                 return "ProductCode: " + ProductCode + "   Price: " + Price;
             }
         }
 
+        //Create the Product Catalog based on Pricing data model above.
         public class Catalog
         {
-            public List<ProductList> newProductCatalog = new List<ProductList>();
-
-            public void AddDefaultProducts(List<ProductList> newCatalog)
+            public List<ProductList> newProductCatalog = new List<ProductList>
             {
-                newCatalog.Add(new ProductList { ProductCode = "A", Price = 1.25, HasBulk = true, BulkTrigger = 3, BulkDiscount = 0.75 });
-                newCatalog.Add(new ProductList { ProductCode = "B", Price = 4.25, HasBulk = false });
-                newCatalog.Add(new ProductList { ProductCode = "C", Price = 1.00, HasBulk = true, BulkTrigger = 6, BulkDiscount = 1 });
-                newCatalog.Add(new ProductList { ProductCode = "D", Price = 0.75, HasBulk = false });
+                new ProductList { ProductCode = "A", Price = 1.25, HasBulk = true, BulkTrigger = 3, BulkDiscount = 0.75 },
+                new ProductList { ProductCode = "B", Price = 4.25, HasBulk = false },
+                new ProductList { ProductCode = "C", Price = 1.00, HasBulk = true, BulkTrigger = 6, BulkDiscount = 1 },
+                new ProductList { ProductCode = "D", Price = 0.75, HasBulk = false }
+            };
+
+            //Price Catalog as per brief.
+            public void AddNewProduct(List<ProductList> newCatalog, string newProductCode, double newPrice, bool newHasBulk, int newBulkTrigger, double newBulkDiscount)
+            {
+                newCatalog.Add(new ProductList { ProductCode = newProductCode, Price = newPrice, HasBulk = newHasBulk, BulkTrigger = newBulkTrigger, BulkDiscount = newBulkDiscount });
             }
+            //Used in Console Display shows current Catalog
             public void ShowCurrentProducts(List<ProductList> PriceCatalog)
             {
                 foreach (ProductList product in PriceCatalog)
@@ -40,6 +48,7 @@ namespace SeeClearlyPOS_Library
             }
         }
 
+        //Sets up Shopping cart, Displays and clears cart If multiple transactions are done on Console.
         public class Cart
         {
             public List<string> CurrentCart = new List<string>();
@@ -59,6 +68,7 @@ namespace SeeClearlyPOS_Library
 
         }
 
+        //On the Console A check is done to ensure non-Product code values are not put on the cart
         public bool IsRealProduct(List<string> shoppingCart, List<ProductList> priceCatalog, string terminalInput)
         {
             bool inCatalog = priceCatalog.Exists(x => x.ProductCode == terminalInput);
@@ -78,8 +88,8 @@ namespace SeeClearlyPOS_Library
                 return false;
             }
         }
-        //Check if it is a product
-
+        
+        //
         public double Calculatetotal(List<string> shoppingCart, List<ProductList> priceCatalog, double billRunningTotal)
         {
             //Check for bulk discounts

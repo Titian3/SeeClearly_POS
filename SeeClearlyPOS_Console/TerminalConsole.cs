@@ -13,9 +13,6 @@ namespace SeeClearlyPOS_Console
             Terminal.Cart shoppingCart = new Terminal.Cart();
             Terminal.Catalog priceCatalog = new Terminal.Catalog();
 
-            //Set up Products as per spec.
-            priceCatalog.AddDefaultProducts(priceCatalog.newProductCatalog);
-
             //Check Product list looks good on console.
             Console.WriteLine("Current Products:");
             priceCatalog.ShowCurrentProducts(priceCatalog.newProductCatalog);
