@@ -38,7 +38,7 @@ namespace SeeClearlyPOS_Console
                 Console.WriteLine("Please enter product code:");
                 string terminalInput = Console.ReadLine().ToUpper();
 
-                //Menu - type test or input will be checked for product as normal operation.
+                //Menu - Direct Terminal Control.
                 if (terminalInput == "TC1")
                 {
                     string[] testCase1 = { "A", "B", "C", "D", "A", "B", "A" };

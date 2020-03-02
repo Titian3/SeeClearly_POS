@@ -1,8 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SeeClearlyPOS_Library;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 
 
 
