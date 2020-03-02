@@ -1,0 +1,19 @@
+  
+terminalPOS
+
+    Needs to:
+    scan > cart > finalizePurchase
+    OPT(Set prices, add new product, change bulk)
+
+    scan
+        take product as arg
+        lookup linked prices
+        add to cart
+        Check if cart is eligible for bulk
+        OPT(display running total)
+        
+    cart
+        holds products added with scan
+
+    finalizePurchase
+        math total for cart purchase
