@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeeClearlyPOS_Library", "Se
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeeClearlyPOS_Console", "SeeClearlyPOS_Console\SeeClearlyPOS_Console.csproj", "{BCCF8B03-2AAA-4C3D-8464-541EA4A3A8AB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeeClearlyPOS_UnitTesting", "SeeClearlyPOS_UnitTesting\SeeClearlyPOS_UnitTesting.csproj", "{CA98AE65-B9A5-4204-A789-1E80BDFFBD6D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{BCCF8B03-2AAA-4C3D-8464-541EA4A3A8AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCCF8B03-2AAA-4C3D-8464-541EA4A3A8AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BCCF8B03-2AAA-4C3D-8464-541EA4A3A8AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA98AE65-B9A5-4204-A789-1E80BDFFBD6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA98AE65-B9A5-4204-A789-1E80BDFFBD6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA98AE65-B9A5-4204-A789-1E80BDFFBD6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA98AE65-B9A5-4204-A789-1E80BDFFBD6D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
