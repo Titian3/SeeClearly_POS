@@ -19,6 +19,7 @@ Includes some unit tests for some particular test case carts.
 - ![Image of 'Clone or Check Out Code'](http://pubdocs.garbage.geek.nz/ConsoleExecution.PNG)
 - Click start to Bring up the console, there will be a list of arguments available.
 - Unit tests can be started from the test context menu at top or with Ctrl + R, A by default.
+- ![Image of 'Clone or Check Out Code'](http://pubdocs.garbage.geek.nz/RunTests.PNG)
 
 ## Tech used:
 - C#
