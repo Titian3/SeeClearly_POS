@@ -46,6 +46,6 @@ Includes some unit tests for some particular test case carts.
       - A Method to check the input is a valid product.
       - A Method to calculate cart total and apply bulk discount.
 
-2. I have used Visual Studios [Unit testing](SeeClearlyPOS_UnitTesting/SeeClearlyLibraryTest.cs) to automate testing the required test carts and also some of the library Methods and data.
+2. I have used Visual Studio [Unit testing](SeeClearlyPOS_UnitTesting/SeeClearlyLibraryTest.cs) to automate testing the required test carts and also some of the library Methods and data.
 
 3. A [console](SeeClearly_POS/SeeClearlyPOS_Console/TerminalConsole.cs) has been created to emulate how the library might interact on a basic interface and to help with testing my code. It can also do the 3 test cases.
