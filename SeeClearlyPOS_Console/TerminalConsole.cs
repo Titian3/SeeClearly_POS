@@ -19,9 +19,7 @@ namespace SeeClearlyPOS_Console
             //Make sure to start total at 0 prepare interface.
             bool stillShopping = true;
             double billRunningTotal = 0;
-
-            //Readline to query prices.
-            /*
+            string commands = @"
             Arguments:
                 -TC1 -- Runs test case 1.
                 -TC2 -- Runs test case 2.
@@ -30,8 +28,9 @@ namespace SeeClearlyPOS_Console
                 -CT -- Completes transaction, totals values.
                 -CS -- Complete the Shopping experience.
                 -ADD -- Addes a new item to the catalog.
-                -ITEMS -- Shows products in catalog.
-             */
+                -ITEMS -- Shows products in catalog.";
+            Console.WriteLine(commands);
+
             do
             {
                 Console.WriteLine("[TERMINAL:] Please enter product or argument:");
