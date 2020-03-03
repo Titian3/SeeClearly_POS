@@ -37,11 +37,11 @@ Includes some unit tests for some particular test case carts.
 ## How I implemented these:
 1. I have created a [class library](SeeClearlyPOS%20Library/Terminal.cs), it is split in to 3 classes to manage the terminal.
 
-    - ProductList: 
+    - **ProductList:** 
       - The Pricing Data Model used for the Catalog.
-    - Catalog: 
+    - **Catalog:** 
       - The Product list with the details provided from the requirements.
-    - Cart: 
+    - **Cart:** 
       - The Cart List to hold input of products. 
       - A Method to check the input is a valid product.
       - A Method to calculate cart total and apply bulk discount.
