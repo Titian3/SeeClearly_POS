@@ -8,7 +8,7 @@ Includes some unit tests for some particular test case carts.
 ## Installation / Usage:
 - Open Visual Studio 2019, Currently using community version With C# and .NET packages installed.
 - Click on 'Clone or Check Out Code' Button on quick start panel.
-![Image of 'Clone or Check Out Code'](https://http://pubdocs.garbage.geek.nz/CloneButton.PNG)
+![Image of 'Clone or Check Out Code'](http://pubdocs.garbage.geek.nz/CloneButton.PNG)
 - On The Github Repository click the 'clone or download button'.
 - Copy the Git link or click the copy button.
 - Paste this link on the 'Repository Location' on Visual Studio Then click Clone.
