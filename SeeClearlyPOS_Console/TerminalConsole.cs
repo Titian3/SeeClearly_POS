@@ -7,14 +7,12 @@ namespace SeeClearlyPOS_Console
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Welcome To SeeClearlyPOS");
 
-            Console.WriteLine("Welcome To seeClearlyPOS");
-            Terminal newTerminalSession = new Terminal();
-            Terminal.ConsoleHelpers consoleHelpers = new Terminal.ConsoleHelpers();
             Terminal.Cart shoppingCart = new Terminal.Cart();
             Terminal.Catalog priceCatalog = new Terminal.Catalog();
+            Terminal.ConsoleHelpers consoleHelpers = new Terminal.ConsoleHelpers();
 
-            //Check Product list looks good on console.
             Console.WriteLine("Current Products:");
             priceCatalog.ShowCurrentProducts(priceCatalog.ProductCatalog);
 
@@ -39,7 +37,7 @@ namespace SeeClearlyPOS_Console
                 Console.WriteLine("[TERMINAL:] Please enter product or argument:");
                 string terminalInput = Console.ReadLine().ToUpper();
 
-                //Menu - Direct Terminal Control. Console test case checks
+                //Menu - Takes arguments as above
                 if (terminalInput == "TC1")
                 {
                     string[] testCase1 = { "A", "B", "C", "D", "A", "B", "A" };
@@ -61,7 +59,6 @@ namespace SeeClearlyPOS_Console
                     shoppingCart.CalculateCartTotal(shoppingCart.CurrentCart, priceCatalog.ProductCatalog, billRunningTotal);
                     shoppingCart.ClearCurrentCart();
                 }
-                //Show Current Cart contents
                 else if (terminalInput == "CART")
                 {
                     shoppingCart.ShowCartContents(shoppingCart.CurrentCart);
@@ -102,7 +99,7 @@ namespace SeeClearlyPOS_Console
                     
                     
                 }
-                //Shows the Items avalible to be scanned.
+                //Shows the Items avalible to be scanned, for if a new item is added.
                 else if (terminalInput == "ITEMS")
                 {
                     priceCatalog.ShowCurrentProducts(priceCatalog.ProductCatalog);

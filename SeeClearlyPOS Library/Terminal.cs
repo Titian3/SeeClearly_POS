@@ -25,6 +25,7 @@ namespace SeeClearlyPOS_Library
         //Create the Product Catalog based on Pricing data model above.
         public class Catalog
         {
+            //Price Catalog as per brief.
             public List<ProductList> ProductCatalog = new List<ProductList>
             {
                 new ProductList { ProductCode = "A", Price = 1.25, HasBulk = true, BulkTrigger = 3, BulkDiscount = 0.75 },
@@ -33,7 +34,7 @@ namespace SeeClearlyPOS_Library
                 new ProductList { ProductCode = "D", Price = 0.75, HasBulk = false }
             };
 
-            //Price Catalog as per brief.
+            //Used in Console Adds a new product to the catalog
             public void AddNewProduct(List<ProductList> newCatalog, string newProductCode, double newPrice, bool newHasBulk, int newBulkTrigger, double newBulkDiscount)
             {
                 newCatalog.Add(new ProductList { ProductCode = newProductCode, Price = newPrice, HasBulk = newHasBulk, BulkTrigger = newBulkTrigger, BulkDiscount = newBulkDiscount });
@@ -52,7 +53,6 @@ namespace SeeClearlyPOS_Library
         //Sets up Shopping cart, Displays and clears cart If multiple transactions are done on Console.
         public class Cart
         {
-            //Cart Initialized with nothing in it.
             public List<string> CurrentCart = new List<string>();
 
             public void ShowCartContents(List<string> cartContents)
@@ -69,7 +69,7 @@ namespace SeeClearlyPOS_Library
                 CurrentCart.Clear();
             }
 
-            //On the Console A check is done to ensure non-Product code values are not put on the cart, adds product to cart.
+            //A check is done to ensure non-ProductCode values are not put on the cart, adds product to cart.
             public bool AddProductToCart(List<string> shoppingCart, List<ProductList> priceCatalog, string terminalInput)
             {
                 bool inCatalog = priceCatalog.Exists(x => x.ProductCode == terminalInput);
@@ -89,7 +89,7 @@ namespace SeeClearlyPOS_Library
                     return false;
                 }
             }
-            //Calculates if the cart is eligible for any bulk discounts and adds the cart up for the total result.
+            //Calculates Cart totals.
             public double CalculateCartTotal(List<string> shoppingCart, List<ProductList> priceCatalog, double billRunningTotal)
             {
                 //Check for bulk discounts
@@ -100,6 +100,7 @@ namespace SeeClearlyPOS_Library
                 {
                     Console.WriteLine("Currently in the cart: {0} x {1}", key.ProductCodeCount, key.ProductCodeName);
                     var productRef = priceCatalog.Find(x => x.ProductCode.Contains(key.ProductCodeName));
+                    //Check if eligible for bulk discount
                     if (productRef.HasBulk == true)
                     {
                         billRunningTotal = billRunningTotal + (productRef.Price * key.ProductCodeCount);
@@ -124,7 +125,7 @@ namespace SeeClearlyPOS_Library
         }
         public class ConsoleHelpers
         {
-            //Used to perform similar tests to the unit tests on the console. 
+            //Used to perform similar tests to the unit tests but on the console. 
             public void TestCase(string[] caseArray, double targetValue, List<string> shoppingCart, List<ProductList> priceCatalog, double billRunningTotal)
             {
                 Cart shoppingCartF = new Cart();
