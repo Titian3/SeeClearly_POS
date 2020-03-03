@@ -8,7 +8,8 @@ Includes some unit tests for some particular test case carts.
 ## Installation / Usage:
 - Open Visual Studio 2019, Currently using community version With C# and .NET packages installed.
 - Click on 'Clone or Check Out Code' Button on quick start panel.
-  ![Image of 'Clone or Check Out Code'](http://pubdocs.garbage.geek.nz/CloneButton.PNG)
+![Image of 'Clone or Check Out Code'](http://pubdocs.garbage.geek.nz/CloneButton.PNG)
+  
 - On The Github Repository click the 'clone or download button'.
 - Copy the Git link or click the copy button.
 - Paste this link on the 'Repository Location' on Visual Studio Then click Clone.
@@ -16,7 +17,7 @@ Includes some unit tests for some particular test case carts.
 - ![Image of 'Switch Button'](http://pubdocs.garbage.geek.nz/SwitchViewButton.PNG)
 - Push F6 to build the solution.
 - At the Top toolbar, Click the startup project dropdown, select 'SeeClearlyPOS_Console'.
-- ![Image of 'Console start'](http://pubdocs.garbage.geek.nz/ConsoleExecution.PNG)
+- ![Image of 'Console start'](http://pubdocs.garbage.geek.nz/ConsoleExecutionButton.PNG)
 - Click start to Bring up the console, there will be a list of arguments available.
 - Unit tests can be started from the test context menu at top or with Ctrl + R, A by default.
 - ![Image of 'Tests menu'](http://pubdocs.garbage.geek.nz/RunTests.PNG)
