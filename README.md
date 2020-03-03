@@ -6,7 +6,7 @@ Accepts arbitrary ordering of products from a product list then returns a total 
 Includes some unit tests for some particular test case carts. 
 
 ## Installation / Usage:
-- Open Visual Studio 2019, Currently using community version.
+- Open Visual Studio 2019, Currently using community version With C# and .NET packages installed.
 - Click on 'Clone or Check Out Code' Button on quick start panel.
 - On The Github Repository click the 'clone or download button'.
 - Copy the Git link or click the copy button.
